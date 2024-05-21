@@ -1,0 +1,74 @@
+.tsigaras-footer {
+  background-color: var(--dk-footer);
+
+  &__wrap {
+    margin-top: 100px;
+    text-align: center;
+
+    & > * {
+      display: block;
+      color: var(--lg);
+    }
+  }
+
+  a {
+    color: var(--lg);
+
+    &:hover {
+      color: var(--red);
+    }
+  }
+
+  &__follow-us {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__instagram-name {
+    display: inline-block;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 61px;
+    position: relative;
+    padding-bottom: 30px;
+
+    &::after {
+      content: "";
+      width: 73px;
+      height: 2px;
+      position: absolute;
+      background-color: var(--red);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  #sb_instagram {
+    padding-bottom: 0 !important;
+  }
+
+  .footer__social {
+    position: static;
+    margin-top: 40px;
+
+    ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer__logo {
+    margin: 40px 0 20px;
+  }
+
+  .logo-footer_bottom {
+    display: block;
+    margin: 40px auto 0;
+  }
+}

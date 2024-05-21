@@ -1,0 +1,489 @@
+/* ==========================================================================
+CSS for Customizer Custom Controls
+========================================================================== */
+
+//SELECT2
+
+.customize-control select,
+.select2-container--default .selection .select2-selection--single {
+  position: relative;
+}
+
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__clear {
+  position: absolute;
+  right: 0;
+}
+
+.wp-customizer .select2-container .select2-dropdown {
+  z-index: 900000;
+}
+
+//Sortable Repeater
+
+.sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sortable input[type="text"] {
+  margin: 5px 5px 5px 0;
+  width: 80%;
+}
+
+.sortable div {
+  cursor: move;
+}
+
+.customize-control-sortable-repeater-delete {
+  color: #d4d4d4;
+}
+
+.customize-control-sortable-repeater-delete:hover {
+  color: #f00;
+}
+
+.customize-control-sortable-repeater-delete .dashicons-no-alt {
+  text-decoration: none;
+  margin: 8px 0 0 0;
+  font-weight: 600;
+}
+
+.customize-control-sortable-repeater-delete:active,
+.customize-control-sortable-repeater-delete:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.repeater .dashicons-sort {
+  margin: 8px 5px 0 5px;
+  color: #d4d4d4;
+}
+
+.repeater .dashicons-sort:hover {
+  color: #a7a7a7;
+}
+
+//Toggle Switch
+.toggle-switch-control .customize-control-title {
+  display: inline-block;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 64px;
+  float: right;
+}
+
+.toggle-switch .toggle-switch-checkbox {
+  display: none;
+}
+
+.toggle-switch .toggle-switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.toggle-switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.toggle-switch-inner:before,
+.toggle-switch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 22px;
+  padding: 0;
+  line-height: 22px;
+  font-size: 20px;
+  color: white;
+  font-family: dashicons;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.toggle-switch-inner:before {
+  content: "\f147";
+  padding-left: 8px;
+  background-color: #2885bb;
+  color: #fff;
+}
+
+.toggle-switch-inner:after {
+  content: "\f158";
+  padding-right: 8px;
+  background-color: #eee;
+  color: #999;
+  text-align: right;
+}
+
+.toggle-switch-switch {
+  display: block;
+  width: 16px;
+  margin: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 38px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.toggle-switch-checkbox:checked+.toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+
+.toggle-switch-checkbox:checked+.toggle-switch-label .toggle-switch-switch {
+  right: 0;
+}
+
+
+//Slider
+
+.slider-custom-control {
+  margin-bottom: 30px;
+}
+
+.slider-custom-control input[type=number]::-webkit-inner-spin-button,
+.slider-custom-control input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider-custom-control input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.slider-custom-control .customize-control-title {
+  display: inline-block;
+}
+
+.slider-custom-control input[type=number] {
+  text-align: right;
+  width: 50px;
+  float: right;
+}
+
+.slider-custom-control .slider {
+  width: 85%;
+  float: left;
+  margin: 20px 0 10px;
+}
+
+.slider-custom-control .slider-reset {
+  float: right;
+  cursor: pointer;
+}
+
+.slider-custom-control .slider-value {
+  border: none;
+  text-align: right;
+  width: 50px;
+  margin-right: 5px;
+}
+
+.slider-custom-control .slider-value,
+.slider-custom-control .slider-unit {
+  float: right;
+}
+
+.slider-custom-control .ui-widget.ui-widget-content {
+  border: 1px solid #f4f4f4;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-br {
+  border-bottom-right-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-bl {
+  border-bottom-left-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-tr {
+  border-top-right-radius: 3px;
+}
+
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-tl {
+  border-top-left-radius: 3px;
+}
+
+.slider-custom-control .ui-widget-content {
+  background: #fff none repeat scroll 0 0;
+  color: #333;
+}
+
+.slider-custom-control .ui-slider-horizontal {
+  height: 3px;
+}
+
+.slider-custom-control .ui-slider {
+  position: relative;
+  text-align: left;
+}
+
+.slider-custom-control .ui-state-default,
+.slider-custom-control .ui-widget-content .ui-state-default,
+.slider-custom-control .ui-widget-header .ui-state-default,
+.slider-custom-control .ui-button,
+.slider-custom-control .ui-button.ui-state-disabled:hover,
+.slider-custom-control .ui-button.ui-state-disabled:active {
+  background: #2885bb none repeat scroll 0 0;
+  border: 1px solid #2885bb;
+  color: #454545;
+  font-weight: normal;
+}
+
+.slider-custom-control .ui-slider-horizontal .ui-slider-handle {
+  margin-left: -7px;
+  top: -7px;
+  border-radius: 50%;
+}
+
+.slider-custom-control .ui-slider .ui-slider-handle {
+  cursor: pointer;
+  height: 14px;
+  position: absolute;
+  width: 14px;
+  z-index: 2;
+}
+
+.slider-custom-control .dashicons-image-rotate {
+  margin-top: 10px;
+  color: #d4d4d4;
+  size: 16px;
+}
+
+.slider-custom-control .dashicons-image-rotate:hover {
+  color: #a7a7a7;
+}
+
+//Image Radio Buttons
+
+.image_radio_button_control .radio-button-label>input {
+  display: none;
+}
+
+.image_radio_button_control .radio-button-label>img {
+  cursor: pointer;
+  border: 3px solid #ddd;
+}
+
+.image_radio_button_control .radio-button-label>input:checked+img {
+  border: 3px solid #2885bb;
+}
+
+#customize-controls .image_radio_button_control .radio-button-label>img {
+  max-width: 70px;
+}
+
+//Text Radio Buttons
+
+.text_radio_button_control:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.text_radio_button_control .radio-buttons {
+  display: inline-block;
+  border: 1px solid #f9f9fe;
+}
+
+.text_radio_button_control .radio-button-label {
+  cursor: pointer;
+  float: left;
+}
+
+.text_radio_button_control .radio-button-label>input {
+  display: none;
+}
+
+.text_radio_button_control .radio-button-label span {
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid #f9f9fe;
+  margin: 0;
+  background-color: #eee;
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.text_radio_button_control .radio-button-label span:hover {
+  background-color: rgba(255, 255, 255, .2);
+  color: #2885bb;
+}
+
+.text_radio_button_control .radio-button-label>input:checked+span {
+  background-color: #2084bd;
+  color: #fff;
+}
+
+.text_radio_button_control .radio-button-label>input:checked+span:hover {
+  color: #fff;
+}
+
+
+//Single Accordion
+
+.single-accordion-toggle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px 5px 5px 0;
+  cursor: pointer;
+}
+
+.accordion-icon-toggle {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.single-accordion-toggle-rotate .accordion-icon-toggle {
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.single-accordion {
+  display: none;
+}
+
+.single-accordion ul {
+  margin: 0;
+  padding: 0;
+}
+
+.single-accordion li {
+  background-color: #e4e4e4;
+  color: #888;
+  width: 115px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.single-accordion li i {
+  margin-left: 5px;
+}
+
+
+//Textarea/TinyMCE
+
+.tinymce-control textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+
+//Pill Checkboxes
+
+.pill_checkbox_control .checkbox-label>input {
+  display: none;
+}
+
+.pill_checkbox_control .checkbox-label>.sortable-pill-title {
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 5px
+}
+
+.pill_checkbox_control .sortable .checkbox-label>.sortable-pill-title {
+  cursor: move;
+}
+
+.pill_checkbox_control .sortable.fullwidth_pills .checkbox-label>.sortable-pill-title {
+  cursor: pointer;
+}
+
+.pill_checkbox_control .checkbox-label>input:checked+.sortable-pill-title {
+  background-color: #2084bd;
+  color: #fff;
+}
+
+.pill_checkbox_control .checkbox-label>input:checked+.sortable-pill-title:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: dashicons;
+  font-weight: normal;
+  font-size: 24px;
+  content: "\f147";
+  margin-left: -10px;
+  vertical-align: bottom;
+}
+
+.pill_checkbox_control .fullwidth_pills .checkbox-label>.sortable-pill-title {
+  width: 100%;
+  border-radius: 0;
+}
+
+.pill_checkbox_control .sortable.fullwidth_pills .checkbox-label>.sortable-pill-title {
+  width: 90%;
+}
+
+.pill-ui-state-highlight {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: 1px dotted #2084bd;
+  margin-bottom: 5px;
+  height: 16px;
+}
+
+.pill_checkbox_control .sortable_pills .pill-ui-state-highlight {
+  width: 50px;
+  border-radius: 20px;
+}
+
+.pill_checkbox_control .sortable_pills.fullwidth_pills .pill-ui-state-highlight {
+  width: 90%;
+  border-radius: 0;
+}
+
+.pill_checkbox_control .dashicons-sort {
+  margin: 5px 0 0 1px;
+  color: #d4d4d4;
+  cursor: move;
+}
+
+.pill_checkbox_control .dashicons-sort:hover {
+  color: #a7a7a7;
+}
+
+.pill_checkbox_control .sortable_pills.fullwidth_pills .ui-sortable-helper {
+  width: calc(100% - 25px) !important;
+}

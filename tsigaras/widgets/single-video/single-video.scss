@@ -1,0 +1,97 @@
+@import "../../assets/scss/mixin";
+
+.tsigaras-single-video {
+  &__media {
+    display: inline-block;
+    padding: 30px 45px;
+    background: rgba(248, 181, 47, 1);
+
+    @include xl-max {
+      padding: 25px 30px;
+    }
+
+    @include md-max {
+      padding: 20px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-wrap {
+      background-color: #fff;
+      width: 93px;
+      height: 93px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include xl-max {
+        width: 70px;
+        height: 70px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: rgba(255, 255, 255, 0.21);
+        border-radius: 50%;
+        animation: heart-pulse 1.5s ease-out;
+        animation-iteration-count: infinite;
+      }
+
+      svg {
+        @include xl-max {
+          width: 20px;
+          height: 25px;
+        }
+      }
+
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 26px;
+      color: var(--lg);
+      margin-top: 19px;
+
+      @include md-max {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@keyframes heart-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: .3;
+  }
+}
+
+
+.fancybox-button {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.fancybox-slide {
+  @include md-max {
+    padding-inline: 15px !important;
+  }
+}

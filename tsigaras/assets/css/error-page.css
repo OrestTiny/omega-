@@ -1,0 +1,60 @@
+.tsigaras-error__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 80px 20px;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--e-global-color-accent)
+}
+
+.tsigaras-error__wrap .tsigaras-error__title {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 160px;
+  margin-bottom: 17px;
+  position: relative;
+  z-index: 5
+}
+
+@media only screen and (max-width:1024px) {
+  .tsigaras-error__wrap .tsigaras-error__title {
+    font-size: 140px;
+    margin-bottom: 10px
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .tsigaras-error__wrap .tsigaras-error__title {
+    font-size: 80px;
+    margin-bottom: 15px
+  }
+}
+
+.tsigaras-error__wrap .tsigaras-error__description {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  position: relative;
+  z-index: 5
+}
+
+@media only screen and (max-width:767px) {
+  .tsigaras-error__wrap .tsigaras-error__description {
+    margin: 0 auto 45px
+  }
+}
+
+/*# sourceMappingURL=error-page.css.map */

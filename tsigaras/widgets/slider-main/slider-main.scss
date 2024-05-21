@@ -1,0 +1,51 @@
+@import "../../assets/scss/mixin";
+
+.tsigaras-slider-main {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__media {
+    height: 76px;
+    width: 76px;
+    border-radius: 50%;
+  }
+
+  h6,
+  p {
+    color: var(--lg);
+  }
+
+  h6 {
+    margin: 10px 0;
+  }
+
+  p {
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .swiper-pagination {
+    position: static;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-bullet {
+      height: 2px;
+      width: 26px;
+      background-color: var(--lg);
+      border-radius: 0;
+      opacity: 1;
+
+      &-active {
+        background-color: var(--red);
+      }
+    }
+  }
+}

@@ -1,0 +1,427 @@
+@import './mixin';
+
+html {
+  overflow-x: hidden;
+  margin-top: 0 !important;
+  // scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  // scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.tsigaras-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+
+  &__wrap {
+    flex: 1;
+  }
+
+  .inside {
+    margin-bottom: 24px;
+
+    @include sm-max {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  .mb-50 {
+    margin-bottom: 50px;
+
+    @include xl-max {
+      margin-bottom: 40px;
+    }
+
+    @include md-max {
+      margin-bottom: 36px;
+    }
+  }
+
+  .mb-40 {
+    margin-bottom: 40px;
+
+    @include md-max {
+      margin-bottom: 30px;
+    }
+  }
+
+  .mb-30 {
+    margin-bottom: 30px;
+
+    @include md-max {
+      margin-bottom: 20px;
+    }
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+
+    @include md-max {
+      margin-bottom: 15px;
+    }
+  }
+
+  .mb-25 {
+    margin-bottom: 25px;
+
+    @include md-max {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+
+  &>a {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 61px;
+  line-height: 0;
+}
+
+.h2 {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -1.32px;
+
+  @include xl-max {
+    font-size: 36px;
+    letter-spacing: -1.08px;
+  }
+
+  @include md-max {
+    font-size: 34px;
+    letter-spacing: -1.02px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+.hero {
+  font-size: 105px;
+  line-height: 100px;
+  font-weight: 700;
+
+  @include xl-max {
+    font-size: 90px;
+    line-height: 110%;
+  }
+
+  @include md-max {
+    font-size: 60px;
+    line-height: 110%;
+  }
+}
+
+
+.h-line {
+  padding-bottom: 30px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 73px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    display: block;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: var(--e-global-color-text);
+}
+
+::-moz-placeholder {
+  color: var(--e-global-color-text);
+}
+
+:-ms-input-placeholder {
+  color: var(--e-global-color-text);
+}
+
+:-moz-placeholder {
+  color: var(--e-global-color-text);
+}
+
+:focus {
+  outline: 0;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 13px;
+  margin-left: 25px;
+}
+
+p {
+  margin-bottom: 15px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.p {
+  &-bg {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &-md {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &-sm {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+a {
+  transition: color var(--tr);
+  text-decoration: none;
+
+  &:focus,
+  &:active {
+    color: var(--e-global-color-accent);
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  path {
+    transition: fill var(--tr), stroke var(--tr);
+  }
+
+
+}
+
+textarea,
+input,
+button {
+  font-family: "Figtree", sans-serif;
+}
+
+input {
+  padding: 12px 20px;
+  border-radius: 3px;
+  background: #FAFAFA;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  border: none;
+}
+
+select {
+  font-family: "Figtree", sans-serif;
+  vertical-align: middle;
+  border-radius: 50px;
+  background-color: #FAFAFA;
+  border: none;
+  outline: none !important;
+  color: var(--e-global-color-accent);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  border: 0;
+  padding: 2px 30px 2px 16px;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M6 9.5L12 15.5L18 9.5' stroke='%230044AA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 20px;
+  background-position: calc(100% - 10px) 2px;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 25px;
+
+  &:focus {
+    outline-offset: 0;
+  }
+}
+
+audio,
+video,
+iframe {
+  max-width: 100%;
+
+  @media screen and (max-width: 767px) {
+    min-width: 200px !important;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 15px;
+  max-width: 1350px;
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 100%;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 34px;
+  border-radius: 36px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: background var(--tr), color var(--tr), border var(--tr);
+
+  &-pr {
+    background-color: var(--red);
+
+    &:active,
+    &:focus {
+      background-color: var(--red);
+      color: var(--lg);
+    }
+
+    &:hover {
+      background-color: var(--lg);
+      color: var(--red);
+      box-shadow: inset 0 0 0 1px var(--red);
+    }
+
+    &[disabled],
+    &:disabled {
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+
+  &-sec {
+    color: var(--red);
+    border: 1px solid var(--red);
+    background-color: var(--lg);
+    border-radius: 36px;
+
+    &:hover {
+      background-color: var(--red);
+      color: var(--lg);
+    }
+  }
+
+}
+
+.media-fit {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &>img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.swiper {
+
+  &-button-prev,
+  &-button-next {
+    border: none;
+    outline: none;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  select,
+  textarea,
+  input {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
