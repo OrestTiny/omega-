@@ -112,6 +112,10 @@ span.body-overlay {
           width: 100%;
           height: auto;
         }
+
+        path {
+          fill: #1E2C3C;
+        }
       }
     }
   }
@@ -122,6 +126,10 @@ span.body-overlay {
   display: flex;
   flex-wrap: wrap;
   gap: 40px 30px;
+
+  @include md-max {
+    gap: 30px;
+  }
 
   .forminator-row {
     flex: 0 1 100%;

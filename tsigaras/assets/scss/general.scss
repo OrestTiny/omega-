@@ -139,7 +139,10 @@ h5,
 
   @include md-max {
     font-size: 60px;
-    line-height: 110%;
+  }
+
+  @include sm-max {
+    font-size: 50px;
   }
 }
 
