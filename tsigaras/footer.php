@@ -30,11 +30,11 @@ $social_names = ['twitter', 'linkedin', 'facebook', 'instagram', 'youtube', 'tik
 </main>
 
 <?php if (!is_404()) { ?>
-  <footer id="footer" class="tsigaras-footer <?= $white_footer_class ?>">
+  <footer id="footer" class="tsigaras-footer">
     <div class="container">
       <div class="tsigaras-footer__wrap">
         <span class="tsigaras-footer__follow-us">follow us</span>
-        <a target="_blank" rel="noopener" href="https://www.instagram.com/just1_niko/" class="tsigaras-footer__instagram-name">@Just1_niko</a>
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/" class="tsigaras-footer__instagram-name">@Omegaplus.Nyc</a>
 
 
         <?php if (!empty($shortcode)) { ?>
@@ -76,7 +76,7 @@ $social_names = ['twitter', 'linkedin', 'facebook', 'instagram', 'youtube', 'tik
         <?php } ?>
       </div>
     </div>
-    <img class="logo-footer_bottom" src="../../../wp-content/themes/tsigaras/assets/image/logo-footer.png" alt="Logo" loading="lazy">
+    <img class="logo-footer_bottom" src="<?php echo get_template_directory_uri(); ?>/assets/image/logo-footer.png" alt="Logo" loading="lazy">
   </footer>
 <?php } ?>
 </div>

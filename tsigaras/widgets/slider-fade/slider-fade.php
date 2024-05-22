@@ -229,7 +229,6 @@ class Tsigaras_Slider_Fade extends Widget_Base
               <p class="mb-40"><?= $settings['desc']  ?></p>
               <a class="btn btn-pr" <?php isLink($settings['btn_url']) ?>><?php echo esc_html__($settings['btn_name'], 'tsigaras') ?></a>
             </div>
-            <img class="tsigaras-slider-fade__logo-vertical" src="../../../../../wp-content/themes/tsigaras/assets/image/logo-header.svg" alt="">
           </div>
         </div>
       </div>

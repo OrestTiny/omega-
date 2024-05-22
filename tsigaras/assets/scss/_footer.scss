@@ -1,11 +1,11 @@
 .tsigaras-footer {
-  background-color: var(--dk-footer);
+  background-color: #1E2C3C;
 
   &__wrap {
     margin-top: 100px;
     text-align: center;
 
-    & > * {
+    &>* {
       display: block;
       color: var(--lg);
     }
