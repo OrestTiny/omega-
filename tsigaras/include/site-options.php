@@ -86,36 +86,17 @@ if (!function_exists('tsigaras_theme_options')) {
       'label' => esc_html__('Button Text', 'tsigaras'),
     ));
 
-
     $wp_customize->add_setting('tsigaras_header_btn_url', array(
       'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'tsigaras_sanitize_url',
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('tsigaras_header_btn_url', array(
-      'type' => 'url',
-      'section' => 'header_settings', // Add a default or your own section
+      'type' => 'text',
+      'section' => 'header_settings',
       'label' => esc_html__('Button URL', 'tsigaras'),
-      'input_attrs' => array(
-        'placeholder' => esc_html__('http://'),
-      ),
     ));
-
-
-    // // Single Settings
-
-    // $wp_customize->add_section('blog_single_settings', array(
-    //   'title' => esc_html__('Blog Single Settings', 'tsigaras')
-    // ));
-
-    // // BLOG SETTINGS
-
-    // $wp_customize->add_section('blog_settings', array(
-    //   'title' => esc_html__('Blog List Settings', 'tsigaras')
-    // ));
-
-
-
 
 
     // FOOTER SETTINGS

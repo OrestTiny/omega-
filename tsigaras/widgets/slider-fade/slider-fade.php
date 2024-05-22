@@ -118,16 +118,6 @@ class Tsigaras_Slider_Fade extends Widget_Base
       ]
     );
 
-    $this->add_control(
-      'prefix',
-      [
-        'label' => esc_html__('Title Prefix', 'tsigaras'),
-        'type' => \Elementor\Controls_Manager::TEXT,
-        'default' => esc_html__('with ', 'tsigaras'),
-        'placeholder' => esc_html__('Type your title here', 'tsigaras'),
-        'label_block' => true,
-      ]
-    );
 
     $this->add_control(
       'desc',
@@ -220,13 +210,12 @@ class Tsigaras_Slider_Fade extends Widget_Base
           <div class="container">
             <div class="tsigaras-slider-fade__main-wrap">
               <div class="tsigaras-slider-fade__main-heading">
-                <h1 class="h-line hero mb-40">
+                <h1 class="hero mb-40">
                   <?= $settings['title'] ?>
                 </h1>
-                <span class="bold"><?= $settings['prefix'] ?></span>
               </div>
 
-              <p class="mb-40"><?= $settings['desc']  ?></p>
+              <p class="mb-40 h-line"><?= $settings['desc']  ?></p>
               <a class="btn btn-pr" <?php isLink($settings['btn_url']) ?>><?php echo esc_html__($settings['btn_name'], 'tsigaras') ?></a>
             </div>
           </div>

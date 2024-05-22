@@ -26,7 +26,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, .5);
+      background-color: rgb(30, 44, 60, .5);
     }
 
     .container {
@@ -39,7 +39,7 @@
       position: absolute;
       max-width: 485px;
       width: 100%;
-      inset: auto 15px 11%;
+      inset: auto 15px 20%;
 
       @include md-max {
         inset: auto 15px 50%;
@@ -49,25 +49,6 @@
 
     &-heading {
       position: relative;
-
-      &>span {
-        position: absolute;
-        bottom: 70px;
-        right: calc(100% - 5px);
-        color: var(--lg);
-        writing-mode: tb-rl;
-        transform: scale(-1);
-        font-size: 19px;
-        line-height: 20px;
-
-        @include xl-max {
-          bottom: 65px;
-        }
-
-        @include md-max {
-          bottom: 40px;
-        }
-      }
     }
 
     h1 {
