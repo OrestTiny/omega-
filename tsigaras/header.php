@@ -11,6 +11,7 @@
  */
 
 $logo = get_theme_mod("tsigaras_header_logo", '');
+$logo_mb = get_theme_mod("tsigaras_header_logo_mb", '');
 $menu = get_theme_mod("tsigaras_header_menu", '');
 $btn_text = get_theme_mod("tsigaras_header_btn_text", '');
 $btn_url = get_theme_mod("tsigaras_header_btn_url", '');
@@ -77,7 +78,7 @@ $social_names = ['twitter', 'linkedin', 'facebook', 'instagram', 'youtube', 'tik
         <!-- NAVIGATION -->
         <nav class="tsigaras-header__menu container">
 
-          <div class="tsigaras-header__logo mobile">
+          <div class="tsigaras-header__logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
               <?php if (isset($logo) && !empty($logo)) {
                 echo wp_get_attachment_image($logo, 'full');
@@ -86,10 +87,10 @@ $social_names = ['twitter', 'linkedin', 'facebook', 'instagram', 'youtube', 'tik
           </div>
 
           <div class="tsigaras-header__wrap">
-            <div class="tsigaras-header__logo desktop">
+            <div class="tsigaras-header__logo mobile">
               <a href="<?php echo esc_url(home_url('/')); ?>">
-                <?php if (isset($logo) && !empty($logo)) {
-                  echo wp_get_attachment_image($logo, 'full');
+                <?php if (isset($logo_mb) && !empty($logo_mb)) {
+                  echo wp_get_attachment_image($logo_mb, 'full');
                 } ?>
               </a>
             </div>

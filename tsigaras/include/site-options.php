@@ -49,6 +49,17 @@ if (!function_exists('tsigaras_theme_options')) {
       'mime_type' => 'image',
     )));
 
+    $wp_customize->add_setting('tsigaras_header_logo_mb', array(
+      'sanitize_callback' => 'absint',
+      'validate_callback' => 'tsigaras_validate_image',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'tsigaras_header_logo_mb', array(
+      'label' => esc_html__('Logo Mobile', 'tsigaras'),
+      'section' => 'header_settings',
+      'mime_type' => 'image',
+    )));
+
     $menus = wp_get_nav_menus();
     $nav_menus = array();
     if (!isset($menus) || empty($menus)) {
